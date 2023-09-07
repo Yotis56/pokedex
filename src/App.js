@@ -4,27 +4,32 @@ import {  useDispatch, useSelector } from 'react-redux'
 //components
 import PokemonList from './Components/PokemonList';
 import Searcher from './Components/Searcher';
-import { getPokemon } from './api';
-import { getPokemonsWithDetails, setLoading } from './actions';
+
 
 //assets
 import Logo from './static/logo.svg'
 import './App.css';
+import { fetchPokemonsWithDetails } from './slices/pokemonSlice';
 
 function App() {
 
-  const pokemons = useSelector( state => state.pokemons)
+  const search = useSelector( state => state.search)
+  const pokemons = useSelector( state => {
+    return search === "" ? state.pokemons : state.filteredPokemons
+  })
+  
   const loading = useSelector( state => state.loading)
   const dispatch = useDispatch()
   
   useEffect(  () => {
-    const fetchPokemons = async () => {
-      dispatch(setLoading(true))
-      const results = await getPokemon()
-      dispatch(getPokemonsWithDetails(results))
-      dispatch(setLoading(false))
-    } 
-    fetchPokemons()
+    // const fetchPokemons = async () => {
+    //   dispatch(setLoading(true))
+    //   const results = await getPokemon()
+    //   dispatch(getPokemonsWithDetails(results))
+    //   dispatch(setLoading(false))
+    // } 
+    // fetchPokemons()
+    dispatch(fetchPokemonsWithDetails())
   }, [])
 
   return (

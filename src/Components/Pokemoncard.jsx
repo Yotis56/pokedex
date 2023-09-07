@@ -2,7 +2,8 @@ import { useDispatch } from 'react-redux'
 import { Card } from 'antd'
 import Meta from 'antd/lib/card/Meta'
 import StarButton  from './StarButton'
-import { setFavorite } from '../actions'
+import { setFavorite } from '../slices/pokemonSlice'
+
 
 const PokemonCard = ({ pokemon }) => {
     const typeString = pokemon.types.map(elem => elem.type.name).join(', ')

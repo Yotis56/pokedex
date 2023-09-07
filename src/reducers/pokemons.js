@@ -2,7 +2,6 @@ import { SET_FAVORITE, SET_LOADING, SET_POKEMONS } from "../actions/types"
 
 const initialState = {
     pokemons: [],
-    favorites: [],
     loading: false
 }
 

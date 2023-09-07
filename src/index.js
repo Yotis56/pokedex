@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 
 import App from './App';
 import { pokemonsReducer } from './reducers/pokemons.js'
+import dataReducer from './slices/pokemonSlice'
 import { logger } from './middlewares';
 import './index.css';
 
@@ -20,7 +21,7 @@ const composedEnhancers = composeAlternative(
 // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 
 const store = createStore(
-  pokemonsReducer,
+  dataReducer,
   composedEnhancers
   )
 
