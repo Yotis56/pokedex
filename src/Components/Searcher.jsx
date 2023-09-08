@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Input } from 'antd'
 import '../styles/searcher.css'
 import { useDispatch, useSelector } from 'react-redux'

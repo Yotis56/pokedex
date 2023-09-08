@@ -30,7 +30,7 @@ function App() {
     // } 
     // fetchPokemons()
     dispatch(fetchPokemonsWithDetails())
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="App">

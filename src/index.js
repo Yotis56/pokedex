@@ -5,7 +5,6 @@ import { applyMiddleware, compose, legacy_createStore as createStore } from '@re
 import thunk from 'redux-thunk';
 
 import App from './App';
-import { pokemonsReducer } from './reducers/pokemons.js'
 import dataReducer from './slices/pokemonSlice'
 import { logger } from './middlewares';
 import './index.css';
