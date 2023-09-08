@@ -1,3 +1,4 @@
+import React from 'react';
 import { Col, Spin } from 'antd'
 import { useEffect } from 'react';
 import {  useDispatch, useSelector } from 'react-redux'

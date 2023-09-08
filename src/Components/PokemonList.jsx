@@ -1,3 +1,4 @@
+import React from "react";
 import PokemonCard from "./Pokemoncard";
 import '../styles/pokemonList.css'
 
