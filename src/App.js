@@ -23,24 +23,17 @@ function App() {
   const dispatch = useDispatch()
   
   useEffect(  () => {
-    // const fetchPokemons = async () => {
-    //   dispatch(setLoading(true))
-    //   const results = await getPokemon()
-    //   dispatch(getPokemonsWithDetails(results))
-    //   dispatch(setLoading(false))
-    // } 
-    // fetchPokemons()
     dispatch(fetchPokemonsWithDetails())
   }, [dispatch])
 
   return (
     <div className="App">
-      <Col span={4} offset={10}>
+      <div className='logo__container'>
         <img className='logo' src={Logo} alt="Pokedux" />
-      </Col>
-      <Col span={8} offset={8}>
+      </div>
+      <div className='search__container'>
         <Searcher />
-      </Col>
+      </div>
       {
         loading? 
         <Col offset={12}>

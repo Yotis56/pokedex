@@ -1,7 +1,27 @@
+.logo__container {
+    width: 35%;
+    margin: 0 auto;
+}
+.search__container{
+    width: 75%;
+    margin: 0 auto;
+}
 .pokemonList {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;;
+    flex-direction: column;
     gap: 3rem;
     margin-top: 3rem;
     padding: 0 3rem 2rem;
+}
+@media screen and (min-width: 425px) {
+    .pokemonList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 560px) {
+    .pokemonList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
