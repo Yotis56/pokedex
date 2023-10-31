@@ -7,13 +7,16 @@
     margin: 0 auto;
 }
 .pokemonList {
-    display: flex;;
+    display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
     margin-top: 3rem;
-    padding: 0 3rem 2rem;
+    padding: 0 2rem 2rem;
 }
-@media screen and (min-width: 425px) {
+.ant-card, .ant-card-head {
+    font-size: 13px !important;
+}
+@media screen and (min-width: 321px) {
     .pokemonList {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -21,8 +24,17 @@
 }
 @media screen and (min-width: 560px) {
     .pokemonList {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 720px) {
+    .ant-card-head {
+        font-size: 16px !important;
+    }
+}
+@media screen and (min-width: 960px) {
+    .pokemonList {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 .searcher {
@@ -30,6 +42,7 @@
 }
 .App {
     margin-top: 3rem;
+    overflow: hidden;
 }
 .logo {
     margin-bottom: 3rem;
