@@ -1,5 +1,6 @@
 .App {
     margin-top: 3rem;
+    overflow: hidden;
 }
 .logo {
     margin-bottom: 3rem;
